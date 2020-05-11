@@ -2,7 +2,11 @@
 const time = document.getElementById('time'),
     greeting = document.getElementById('greeting'),
     name = document.getElementById('name'),
-    focus = document.getElementById('focus');
+    focus = document.getElementById('focus'),
+    go = document.getElementById('go'),
+    mainContainer = document.getElementById('main-container'),
+    start = document.getElementById('start'),
+    h1 = document.getElementById('h1');
 
 // Show Time
 const  showTime = () => {
@@ -55,6 +59,21 @@ const setBgGreet = () => {
         greeting.textContent = 'Good Evening';
     }
 }
+
+// Transition from start to main on button-click
+    go.addEventListener('click', () => {
+        // Get input value
+        const getName = document.getElementById('get-name').value;
+        const getFocus = document.getElementById('get-focus').value;
+
+        start.style.display = "none";
+        mainContainer.style.visibility = "visible";
+
+        // Get text from input to the main site
+        name.innerHTML = getName;
+        focus.innerHTML = getFocus;
+    });
+
 
 // Run
 showTime();

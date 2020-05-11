@@ -9,24 +9,24 @@
 
 </head>
 <body>
-    <div class="start">
-        <h1>Hi, what's your name?</h2>
-        <input id ="get-name" type="text" name="" value="">
-        <h1>What's your focus today?</h2>
-        <input id ="get-focus" type="text" name="" value="">
-        <button id="go">Go</button>
+    <div id ="start" class="start">
+            <h1>Hi, what's your name?</h2>
+            <input id ="get-name" class="input" type="text" name="" value="">
+            <h1>What's your focus today?</h2>
+            <input id ="get-focus" class="input" type="text" name="" value="">
+            <button type="submit" id="go">Go</button>
     </div>
 
 
-    <div class="main-container">
+    <div id="main-container" class="main-container">
         <time id="time"></time>
-        <h1>
+        <h1 id="h1">
             <span id="greeting"></span>
-            <span id="name" contenteditable="true">Bene</span>
+            <span id="name"></span>
         </h1>
 
         <h2>What is your focus for today?</h2>
-        <h2 id="focus" contenteditable="true">Make many small js-projects!</h2>
+        <h2 id="focus">Make many small js-projects!</h2>
     </div>
 
 <script type="text/javascript" src="script.js"></script>
