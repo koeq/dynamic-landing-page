@@ -30,6 +30,32 @@ const addZero = (n) => {
 }
 
 // Set background and greeting
+const setBgGreet = () => {
+    let today = new Date(),
+        hour = today.getHours();
+
+    if(hour < 12) {
+        // Morning
+        document.body.style.backgroundImage = "url('../images/morning.jpg')";
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundPosition = "center";
+        greeting.textContent = 'Good Morning';
+    } else if (hour < 18) {
+        // Afternoon
+        document.body.style.backgroundImage = "url('../images/midday.jpg')";
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundPosition = "center";
+        greeting.textContent = 'Good Afternoon';
+    } else {
+        // Evening
+        document.body.style.backgroundImage = "url('../images/evening.jpg')";
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundPosition = "center";
+        document.body.style.color = "white";
+        greeting.textContent = 'Good Evening';
+    }
+}
 
 // Run
 showTime();
+setBgGreet();
